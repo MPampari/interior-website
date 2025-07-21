@@ -1,42 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <meta charset="UTF-8">
+  <title>Elegant Spaces - Home</title>
 
-<header>
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80" alt="Modern Living Room">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: sans-serif;
+    }
+
+    header {
+      position: relative;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 20vh; /* 20% of viewport height */
+      position: relative;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .intro-text {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+      z-index: 10;
+      text-align: center;
+      width: 100%;
+    }
+
+    .swiper-pagination {
+      bottom: 5px !important;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Swiper -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80" alt="Modern Living Room">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://images.unsplash.com/photo-1616627983265-bfdd0b7881dc?auto=format&fit=crop&w=1600&q=80" alt="Luxury Interior">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://images.unsplash.com/photo-1586105251261-72a756497a12?auto=format&fit=crop&w=1600&q=80" alt="Office Interior">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://images.unsplash.com/photo-1627541132156-2930b43b1575?auto=format&fit=crop&w=1600&q=80" alt="Creative Space">
+        </div>
       </div>
-      <div class="swiper-slide">
-        <img src="https://images.unsplash.com/photo-1616627983265-bfdd0b7881dc?auto=format&fit=crop&w=1600&q=80" alt="Luxury Interior">
-      </div>
-      <div class="swiper-slide">
-        <img src="https://images.unsplash.com/photo-1586105251261-72a756497a12?auto=format&fit=crop&w=1600&q=80" alt="Office Interior">
-      </div>
-      <div class="swiper-slide">
-        <img src="https://images.unsplash.com/photo-1627541132156-2930b43b1575?auto=format&fit=crop&w=1600&q=80" alt="Creative Space">
-      </div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
     </div>
 
-    <!-- Pagination (dots) -->
-    <div class="swiper-pagination"></div>
-  </div>
-
-  <div class="intro-text">
-    <h1>Elegant Spaces</h1>
-    <p>Luxury & Commercial Interior Design</p>
-  </div>
-</header>
-
-<body>
-  <header>
-    <h1>Elegant Spaces</h1>
-    <p>Luxury & Commercial Interior Design</p>
+    <div class="intro-text">
+      <h1>Elegant Spaces</h1>
+      <p>Luxury & Commercial Interior Design</p>
+    </div>
   </header>
-  <nav>
+<nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="services.html">Services</a>
@@ -52,20 +97,25 @@
     <p>&copy; 2025 Elegant Spaces. All Rights Reserved.</p>
   </footer>
   <!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  const swiper = new Swiper('.swiper-container', {
-    loop: true,
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false,
-    },
-    effect: 'slide', // or 'fade'
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
-</script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      }
+    });
+  </script>
+
 </body>
 </html>
